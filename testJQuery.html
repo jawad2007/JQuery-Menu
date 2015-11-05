@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Test JQuery</title>
+<link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.min.css">
+<script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+<script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('li').hover(function(){
+			$(this).find('ul>li').stop().toggle(400);
+		});
+	});
+</script>
+<style>
+	ul{
+		padding: 0px;
+		margin: 0px;
+		list-style-type: none;
+	}
+	ul li
+	{
+		float: left;
+		width: 120px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		background-color: red;
+		
+	}
+	
+	ul li a {
+		text-decoration: none;
+		color: white;
+	}
+	
+	ul li li{
+		display: none;
+		background-color: black;
+		color: white;
+	} 
+	
+	ul li li:hover
+	{
+		background-color: red;
+	}
+	ul li li a{
+		text-decoration: none;
+		color: white;
+	}
+	
+	
+</style>
+</head>
+<body>
+<ul>
+	<li><a href="#">Home</a>
+		<ul>
+			<li><a href="#">sublink 1</a></li>
+			<li><a href="#">sublink 2</a></li>
+			<li><a href="#">sublink 3</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Services</a></li>
+	<li><a href="#">About Us</a>
+		<ul>
+			<li><a href="#">sublink 1</a></li>
+			<li><a href="#">sublink 2</a></li>
+			<li><a href="#">sublink 3</a></li>
+		</ul>	
+	</li>
+	<li><a href="#"> Contact Us</a></li>
+</ul>
+</body>
+</html>
